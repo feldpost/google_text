@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version           = GoogleText::Version
   s.platform          = Gem::Platform::RUBY
   s.summary           = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice."
-  s.description       = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice. GoogleText uses Curl and Nokogiri to scrape and post using your regular Google Voice service URLs."
+  s.description       = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice. Alas, Google Voice does not yet have an API, so GoogleText uses Curl and Nokogiri to scrape and post using Google Voice web URLs."
   
   s.homepage          = "http://github.com/feldpost/google_text"
   s.email             = "sebastian@feldpost.com"

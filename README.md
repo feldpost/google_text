@@ -10,7 +10,7 @@ For more information visit
 Overview
 --------
 
-GoogleText is a SMS client library for sending and receiving free SMS through Google Voice. Alas, Google Voice does not yet have an API. So GoogleText uses Curl and Nokogiri to scrape and post using your regular Google Voice service URLs.
+GoogleText is a SMS client library for sending and receiving free SMS through Google Voice. Alas, Google Voice does not yet have an API, so GoogleText uses Curl and Nokogiri to scrape and post using Google Voice web URLs.
 
 
 Why?
@@ -31,9 +31,9 @@ GoogleText currently relies on the following gems:
 Installation
 ------------
 
-1. Get a Google Voice account, if don't already have one
+1. Get a Google Voice account, if don't already have one.
 
-2. Install the gem, which should also install all the perquisites.
+2. Install the gem, which should also install all the prerequisites.
 
    `gem install google_text`
 
