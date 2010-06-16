@@ -16,7 +16,7 @@ GoogleText is a SMS client library for sending and receiving free SMS through Go
 Why?
 ----
 
-Sure, there are a bunch of SMS implementations out there. And while GoogleText is pretty slow and perhaps a bit fragile it is also _absolutely free_ and allows both sending and receiving to and from a real free phone number. Pretty great, if you ask me, and worth the tradeoff in performance.
+Sure, there are a bunch of SMS implementations out there. And while GoogleText is pretty slow and perhaps a bit fragile sending SMS this way is also _absolutely free_ and allows both sending and receiving to and from a real free phone number. Pretty great, if you ask me, and worth the tradeoff in performance.
 
 
 Prerequisites
