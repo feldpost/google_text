@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version           = GoogleText::Version
   s.platform          = Gem::Platform::RUBY
   s.summary           = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice."
-  s.description       = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice."
+  s.description       = "GoogleText is a SMS client library for sending and receiving free SMS through Google Voice. GoogleText uses Curl and Nokogiri to scrape and post using your regular Google Voice service URLs."
   
   s.homepage          = "http://github.com/feldpost/google_text"
   s.email             = "sebastian@feldpost.com"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files            += Dir['[A-Z]*', 'lib/**/*.rb', 'spec/**/*.rb']
   
   s.require_path      = 'lib'
-  
+  s.rubyforge_project = 'google_text'
   s.test_files        = Dir['spec/**/*_spec.rb', 'features/**/*']
   
   s.add_dependency('curb', '~>0.7.6')
