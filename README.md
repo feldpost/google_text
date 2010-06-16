@@ -65,19 +65,20 @@ Sending a message:
     >> message = GoogleText::Message.new(:text => "Hello World!", :to => "(311) 615-4156")
 	=> #<GoogleText::Message:0x102503630 @text="Hello World!", @to="3116154156">
 	>> message.send
-	=> #<GoogleText::Message:0x102503630 @text="Hello World!", @to="3116154156">
+	=> #<GoogleText::Message:0x102515240 @to="3116154156", @sent_status=true, @text="Hello World!">
 	>> message.sent?
 	=> true
 	
 Receiving unread messages:
 
     >> messages = GoogleText::Message.unread
-	=> array
+	=> [#<GoogleText::Message:0x1023fda38 @display_number="+3116154156", @from="(650) 265-1193", @read_status=false, @id="f298c576522c6a1ecc976c649e9826c31e017a24", @relative_start_time="3 minutes ago", @to="Me", @display_start_date_time="6/16/10 2:57 AM", @display_start_time="2:57 AM", @text="Hello World", @labels=["inbox", "unread", "sms", "all"], @start_time=1276671459139>]
 	>> message = messages.first
-	=> message
+	=> #<GoogleText::Message>
 	>> message.read?
 	=> false
 	>> message.mark_as_read
+	=> #<GoogleText::Message>
 	=> message.read?
 	=> true
 	>> messages = GoogleText::Message.unread
