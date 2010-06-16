@@ -17,13 +17,9 @@ module GoogleText
     end
     
     def login
-      if logged_in?
-        dashboard_page
-      else
-        get_xsrf_token
-        post_to_login
-        get_session_id
-      end
+      get_xsrf_token
+      post_to_login
+      get_session_id
     end
     
     def logged_in?

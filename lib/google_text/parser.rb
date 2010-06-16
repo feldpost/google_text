@@ -2,10 +2,6 @@ module GoogleText
   class Parser
     attr_accessor :messages
 
-    def initialize
-      @messages = []
-    end
-
     CSS_SELECTORS = {
       :session_id => 'form#gc-search-form',
       :xsrf_token => 'div.loginBox table#gaia_table input',
@@ -31,6 +27,7 @@ module GoogleText
     end
 
     def messages_from(string)
+      @messages = []
       document = Nokogiri::XML.parse string
       html_fragment = parse_fragment document.to_html
       string = document.css('json').first.to_s.scan(/CDATA\[(.+)\]\]/).flatten
