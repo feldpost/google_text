@@ -9,7 +9,8 @@ module GoogleText
     end
     
     def body
-      @proxy.body_str
+      body = @proxy.body_str
+      body.respond_to?(:force_encoding) ? body.force_encoding('utf-8') : body
     end
     
     def get(url)
