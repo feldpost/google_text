@@ -1,5 +1,9 @@
 require 'rake/testtask'
 require 'rake/rdoctask'
+require "bundler/gem_tasks"
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new('spec')
 
 desc "Push a new version to Rubygems."
 task :publish do

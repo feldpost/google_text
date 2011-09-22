@@ -1,3 +1,6 @@
+require "rubygems"
+require "bundler/setup"
+
 require 'curb'
 require 'nokogiri'
 require 'json'
