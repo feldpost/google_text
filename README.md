@@ -24,6 +24,7 @@ Prerequisites
 
 GoogleText currently relies on the following gems:
 
+* bundler
 * nokogiri
 * curb
 * json
@@ -33,10 +34,14 @@ Installation
 
 1. Get a Google Voice account, if don't already have one.
 
-2. Install the gem, which should also install all the prerequisites.
+2. Install the gem:
 
    `gem install google_text`
 
+3. Install all dependencies using bundler:
+
+	`bundle install`
+	
 3. Configure GoogleText someplace sensible, using the email address and password you use to log on to your Google Voice account. If you are using GoogleText in a Rails application, `config/initializers/google_text.rb` is a good place to put the configuration block:
 
 
