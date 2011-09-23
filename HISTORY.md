@@ -1,3 +1,7 @@
+## 0.0.3 (2011-09-23)
+
+* Adjusted parsers to Google Voice changes
+
 ## 0.0.2 (2010-10-04)
 
 * Ruby 1.9.2 compatibility

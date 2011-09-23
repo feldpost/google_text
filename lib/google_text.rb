@@ -4,6 +4,7 @@ require "bundler/setup"
 require 'curb'
 require 'nokogiri'
 require 'json'
+require "google_text/version"
 require 'google_text/configuration'
 require 'google_text/session'
 require 'google_text/message'
