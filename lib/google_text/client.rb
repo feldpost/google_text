@@ -27,12 +27,12 @@ module GoogleText
     end
     
     def get_xsrf_token
-      @xsrf_token = parser.xsrf_token_from login_page
+      @xsrf_token = Parsers::Login.new(login_page).xsrf_token
     end
     
     def get_session_id
       begin
-        @session_id = parser.session_id_from dashboard_page
+        @session_id = Parsers::Dashboard.new(dashboard_page).session_id
       rescue
         raise "Could not retrieve Google Voice Session ID" 
       end
@@ -44,7 +44,7 @@ module GoogleText
     end
     
     def get_messages
-      @messages = parser.messages_from inbox_page
+      @messages = Parsers::Inbox.new(inbox_page).messages
     end
     
     def mark_as_read(id)

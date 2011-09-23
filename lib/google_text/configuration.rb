@@ -3,7 +3,7 @@ module GoogleText
     attr_accessor :email, :password, :login_url, :user_agent, :dashboard_url, :inbox_url, :service, :send_url, :mark_as_read_url
     
     DEFAULTS = {
-      :login_url => 'https://www.google.com/accounts/ServiceLoginAuth',
+      :login_url => 'https://accounts.google.com/ServiceLoginAuth',
       :dashboard_url => 'https://www.google.com/voice',
       :mark_as_read_url => 'https://www.google.com/voice/inbox/mark',
       :inbox_url => 'https://www.google.com/voice/inbox/recent',

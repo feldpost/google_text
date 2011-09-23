@@ -1,443 +1,906 @@
-<html>
-<style type="text/css">
-  <!--
-  body { font-family: arial,sans-serif; background-color: #fff; margin-top: 2; }
-  td {font-family: arial, sans-serif;}
-  .c { width: 4; height: 4; }
-  a:link { color: #00c; }
-  a:visited { color: #551a8b; }
-  a:active { color: #f00; }
-  .form-noindent { background-color: #fff; border: 1px solid #c3d9ff; }
-  -->
-</style>
-<style type="text/css"><!--
-.gaia.le.lbl { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.fpwd { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
-.gaia.le.chusr { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
-.gaia.le.val { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.rem { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-
-.gaia.captchahtml.desc { font-family: arial, sans-serif; font-size: smaller; } 
-.gaia.captchahtml.cmt { font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
-  
---></style>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
   <title>Google Accounts</title>
-  <style type="text/css"><!--
-  
-  
-    body {
-      font-family: arial, sans-serif;
-      margin: 0;
-      padding: 13px 15px 15px;
-      
-    }
-    .body {
-      margin: 0;
-    }
-    div.errorbox-good {}
-
-    div.errorbox-bad {} 
-
-    div.errormsg { color: red; font-size: smaller; font-family: arial,sans-serif;}
-    font.errormsg { color: red; font-size: smaller; font-family: arial,sans-serif;}
-    
-    div.pagemsg {
-      font-size: smaller; 
-      font-weight: bold; 
-      text-align: center;
-    }
-    div.pagemsg span {
-      padding: 5px; 
-      background: #ff9;
-    }
-
-    
-    div.topbar {
-      font-size:smaller;
-      margin-right: -5px;
-      text-align:right;
-      white-space:nowrap;
-    }
-    div.header {
-      margin-bottom: 9px;
-      margin-left: -2px;
-      position:relative;
-      zoom: 1
-    }
-    div.header img.logo {
-      border: 0;
-      float:left;
-    }
-    div.header div.headercontent {
-      float:right;
-      margin-top:17px;
-    }
-    div.header:after{
-      content:".";
-      display:block;
-      height:0;
-      clear:both;
-      visibility:hidden;
-    }
-    div.pagetitle {
-      font-weight:bold;
-    }
-    
-    .footer { 
-      color: #666;
-      font-size: smaller;
-      margin-top: 40px;
-      text-align: center;
-    }
-    
-    table#signupform {
-      left: -5px;
-      top: -7px;
-      position:relative;
-    }
-    table#signupform td{
-      padding: 7px 5px;
-    }
-    table#signupform td table td{
-      padding: 1px;
-    }
-
-    
-    
-    hr {
-      border: 0;
-      background-color:#DDDDDD;
-      height: 1px;
-      width: 100%;
-      text-align: left;
-      margin: 5px;
-    }
-    
-
-    
-    
-  --></style>
-</head>
-  <body dir="ltr"
-        onLoad=
-                 "gaia_setFocus();"
-               >
-  <div id="main">
-<div class=header>
-  <a href='https://www.google.com/accounts/'>
-  <img class=logo
-       src='https://www.google.com/intl/en/images/logos/accounts_logo.gif'
-       alt="Google" />
-  </img>
-  </a>
-</div>
-  <div id=maincontent>
-  <table border="0" width="100%" cellpadding=0 cellspacing=0>
-  <tr>
-  <td width="75%" valign="top">
-<div style="font-size:83%;">
-<b>
-Sign in to personalize your Google experience.
-</b>
-<br/><br/>
-Google has more to offer when you sign in to your Google Account.
-You can customize pages, view recommendations, and get more relevant search results.
-<br/><br/>
-Sign in on the right or
-<a href="https://www.google.com/accounts/NewAccount">
-create one for free</a>
-using just an email address and password you choose.
-<br/><br/>
-<table border="0" cellpadding="4">
-  <tr>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-  <td>
-  <img src="https://www.google.com/accounts/mail.gif"
-                       alt="Gmail">
-  </img>
-  </td>
-  <td style="font-size:83%">
-  <a href="http://mail.google.com/mail?hl=en">Gmail</a>
-  <br />
-  Get a fresh start with email that has less spam
-  </td>
-  </tr>
-  <tr>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-  <td>
-  <img src="https://www.google.com/accounts/msh.gif"
-                       alt="Web History">
-  </img>
-  </td>
-  <td style="font-size:83%">
-  <a href="http://www.google.com/history/?hl=en">Web History</a>
-  <br />
-  Access and manage your web activity from any computer
-  </td>
-  </tr>
-  <tr>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-  <td>
-  <img src="https://www.google.com/accounts/ig.gif"
-                       alt="iGoogle">
-  </img>
-  </td>
-  <td style="font-size:83%">
-  <a href="http://www.google.com/ig?source=gapg&amp;hl=en">iGoogle</a>
-  <br />
-  Add news, games and more to the Google homepage
-  </td>
-  </tr>
-  <tr>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-  <td>
-  <img src="https://www.google.com/accounts/sierra.gif"
-                       alt="Google Checkout">
-  </img>
-  </td>
-  <td style="font-size:83%">
-  <a href="https://checkout.google.com/?utm_campaign=gaia_em&amp;utm_source=us-en-et-my_accounts&amp;utm_medium=link&amp;hl=en">Google Checkout</a>
-  <br />
-  A faster, safer and more convenient way to shop online
-  </td>
-  </tr>
-</table>
-</div>
-  </td>
-  <td style="padding-left: 10px; " valign="top" align="center">
-  <div id="rhs">
-  <div id="rhs_login_signup_box">
-<script><!--
-
-function gaia_onLoginSubmit() {
-  
-  if (window.gaiacb_onLoginSubmit) {
-    return gaiacb_onLoginSubmit();
-  } else {
-    return true;
-  }
+  <style type="text/css">
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, dl,
+dt, dd, ol, ul, li, table, tr, td, form, object, embed,
+article, aside, canvas, command, details, figcaption,
+figure, footer, group, header, hgroup, mark, menu,
+meter, nav, output, progress, section, summary,
+time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
---></script>
-<style type="text/css"><!--
-  
-    div.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
-    font.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }  
-  
---></style>
-<style type="text/css"><!--
-.gaia.le.lbl { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.fpwd { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
-.gaia.le.chusr { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
-.gaia.le.val { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-.gaia.le.rem { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
-
-.gaia.captchahtml.desc { font-family: arial, sans-serif; font-size: smaller; } 
-.gaia.captchahtml.cmt { font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
-  
---></style>
-<form id="gaia_loginform"
-      
-        action="https://www.google.com/accounts/ServiceLoginAuth" method="post"
-      
-      onsubmit=
-                 "return(gaia_onLoginSubmit());"
-                >
-<div id="gaia_loginbox">
-<table class="form-noindent" cellspacing="3" cellpadding="5" width="100%" border="0">
-  <tr>
-  <td valign="top" style="text-align:center" nowrap="nowrap"
-        bgcolor="#e8eefa">
-  <div class="loginBox">
-  <table id="gaia_table" align="center" border="0" cellpadding="1" cellspacing="0">
-  <tr>
-<td colspan="2" align="center">
-  <font size="-1">
-  Sign in with your
-  </font>
-  <table>
-  <tr>
-  <td valign="top">
-  <img src="https://www.google.com/accounts/google_transparent.gif"
-           alt="Google">
-  </img>
-  </td>
-  <td valign="middle">
-  <font size="+0"><b>Account</b></font>
-  </td>
-  </tr>
-</table>
-</td>
-</tr>
-<tr>
-  <td colspan="2" align="center">
-  </td>
-</tr>
-<tr id="email-row">
-  <td nowrap="nowrap">
-  <div align="right">
-  <span class="gaia le lbl">
-  Email:
-  </span>
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  font: 81.25% arial, helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1;
+  direction: ltr;
+}
+a {
+  color: #15c;
+  text-decoration: none;
+}
+a:active {
+  color: #d14836;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-size: 1.54em;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 0 .46em;
+}
+p {
+  line-height: 17px;
+  margin: 0 0 1em;
+}
+ol, ul {
+  list-style: none;
+  line-height: 17px;
+  margin: 0 0 1em;
+}
+li {
+  margin: 0 0 .5em;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong {
+  color: #222;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+}
+html, body {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  margin: 0 auto;
+  width: 650px;
+  padding: 0 44px;
+}
+.google-header-bar {
+  height: 71px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.header .logo {
+  margin: 18px 0 0 -1px;
+  float: left;
+}
+.header .signin,
+.header .signup {
+  margin: 28px 0 0;
+  float: right;
+  font-weight: bold;
+}
+.header .signup-button {
+  margin: 22px 0 0;
+  float: right;
+}
+.header .signup-button a {
+  position: relative;
+  top: -1px;
+  margin: 0 0 0 1em;
+}
+.main {
+  padding-top: 23px;
+  padding-bottom: 125px;
+}
+.google-footer-bar {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  overflow: hidden;
+}
+.footer {
+  padding-top: 9px;
+  font-size: .85em;
+  white-space: nowrap;
+  line-height: 0;
+}
+.footer ul {
+  color: #999;
+  float: left;
+  max-width: 80%;
+}
+.footer ul li {
+  display: inline;
+  padding: 0 1.5em 0 0;
+}
+.footer form {
+  text-align: right;
+}
+.footer form .lang-chooser {
+  max-width: 20%;
+}
+.announce-bar {
+  position: absolute;
+  bottom: 35px;
+  height: 33px;
+  z-index: 2;
+  width: 100%;
+  background: #f9edbe;
+  border-top: 1px solid #efe1ac;
+  border-bottom: 1px solid #efe1ac;
+  overflow: hidden;
+}
+.announce-bar .message {
+  font-size: .85em;
+  line-height: 33px;
+  margin: 0;
+}
+.announce-bar a {
+  margin: 0 0 0 1em;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '.';
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+*:first-child+html .clearfix {
+  zoom: 1;
+}
+input[type=email],
+input[type=password],
+input[type=text],
+input[type=url] {
+  display: inline-block;
+  height: 29px;
+  margin: 0;
+  padding-left: 8px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=text]:hover,
+input[type=url]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=url]:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+input[type=email][disabled=disabled],
+input[type=password][disabled=disabled],
+input[type=text][disabled=disabled],
+input[type=url][disabled=disabled] {
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+}
+input[type=email][disabled=disabled]:hover,
+input[type=password][disabled=disabled]:hover,
+input[type=text][disabled=disabled]:hover,
+input[type=url][disabled=disabled]:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+input[type=checkbox]:active,
+input[type=radio]:active {
+  border-color: #c6c6c6;
+  background: #ebebeb;
+}
+input[type=checkbox]:hover {
+  border-color: #c6c6c6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+}
+input[type=radio] {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+}
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+  background: #fff;
+}
+input[type=radio]:checked::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background: #666;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+input[type=checkbox]:checked::after {
+  content: url(//ssl.gstatic.com/ui/v1/menu/checkmark.png);
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -5px;
+}
+input[type=checkbox]:focus {
+  outline: none;
+  border-color:#4d90fe;
+}
+.g-button {
+  display: inline-block;
+  min-width: 54px;
+  text-align: center;
+  color: #555;
+  font-size: 11px;
+  font-weight: bold;
+  height: 27px;
+  padding: 0 8px;
+  line-height: 27px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -ms-transition: all 0.218s;
+  -o-transition: all 0.218s;
+  transition: all 0.218s;
+  border: 1px solid #dcdcdc;
+  border: 1px solid rgba(0,0,0,0.1);
+  background-color: #f5f5f5;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+*+html .g-button {
+  min-width: 70px;
+}
+button.g-button,
+input[type=submit].g-button {
+  height: 29px;
+  line-height: 29px;
+  vertical-align: bottom;
+  margin: 0;
+}
+*+html button.g-button,
+*+html input[type=submit].g-button {
+  overflow: visible;
+}
+.g-button:hover {
+  border: 1px solid #c6c6c6;
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all 0.0s;
+  -moz-transition: all 0.0s;
+  -ms-transition: all 0.0s;
+  -o-transition: all 0.0s;
+  transition: all 0.0s;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.g-button:active {
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: linear-gradient(top,#f6f6f6,#f1f1f1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.g-button:visited {
+  color: #666;
+}
+.g-button-submit {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));
+  background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: linear-gradient(top,#4d90fe,#4787ed);
+}
+.g-button-submit:hover {
+  border: 1px solid #2f5bb7;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));
+  background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+}
+.g-button-submit:active {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+.g-button-share {
+  border: 1px solid #29691d;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #3d9400;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3d9400),to(#398a00));
+  background-image: -webkit-linear-gradient(top,#3d9400,#398a00);
+  background-image: -moz-linear-gradient(top,#3d9400,#398a00);
+  background-image: -ms-linear-gradient(top,#3d9400,#398a00);
+  background-image: -o-linear-gradient(top,#3d9400,#398a00);
+  background-image: linear-gradient(top,#3d9400,#398a00);
+}
+.g-button-share:hover {
+  border: 1px solid #2d6200;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #368200;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3d9400),to(#368200));
+  background-image: -webkit-linear-gradient(top,#3d9400,#368200);
+  background-image: -moz-linear-gradient(top,#3d9400,#368200);
+  background-image: -ms-linear-gradient(top,#3d9400,#368200);
+  background-image: -o-linear-gradient(top,#3d9400,#368200);
+  background-image: linear-gradient(top,#3d9400,#368200);
+}
+.g-button-share:active {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+.g-button-red {
+  border: 1px solid transparent;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  background-color: #d14836;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#dd4b39),to(#d14836));
+  background-image: -webkit-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -moz-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -ms-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -o-linear-gradient(top,#dd4b39,#d14836);
+  background-image: linear-gradient(top,#dd4b39,#d14836);
+}
+.g-button-red:hover {
+  border: 1px solid #b0281a;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #c53727;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#dd4b39),to(#c53727));
+  background-image: -webkit-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -moz-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -ms-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -o-linear-gradient(top,#dd4b39,#c53727);
+  background-image: linear-gradient(top,#dd4b39,#c53727);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -ms-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -o-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+.g-button-red:active {
+  border: 1px solid #992a1b;
+  background-color: #b0281a;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#dd4b39),to(#b0281a));
+  background-image: -webkit-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -moz-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -ms-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -o-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: linear-gradient(top,#dd4b39,#b0281a);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+.g-button-white {
+  border: 1px solid #dcdcdc;
+  color: #666;
+  background: #fff;
+}
+.g-button-white:hover {
+  border: 1px solid #c6c6c6;
+  color: #333;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.g-button-white:active {
+  background: #fff;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.g-button-red:visited,
+.g-button-share:visited,
+.g-button-submit:visited {
+  color: #fff;
+}
+.g-button-submit:focus,
+.g-button-share:focus,
+.g-button-red:focus {
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  -moz-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.g-button-share:focus {
+  border-color: #29691d;
+}
+.g-button-red:focus {
+  border-color: #d14836;
+}
+.g-button-submit:focus:hover,
+.g-button-share:focus:hover,
+.g-button-red:focus:hover {
+  -webkit-box-shadow: inset 0 0 0 1px #fff, 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 0 0 1px #fff, 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 0 1px #fff, 0 1px 1px rgba(0,0,0,0.1);
+}
+.g-button img {
+  display: inline-block;
+  margin: -3px 0 0;
+  opacity: .55;
+  vertical-align: middle;
+}
+*+html .g-button img {
+  margin: 4px 0 0;
+}
+.g-button:hover img {
+  opacity: .72;
+}
+.g-button:active img {
+  opacity: 1;
+}
+.errormsg {
+  margin: .5em 0 0;
+  display: block;
+  color: #dd4b39;
+  line-height: 17px;
+}
+.training-msg {
+  padding: .5em 8px;
+  background: #f9edbe;
+}
+.training-msg p {
+  margin: 0 0 .5em;
+}
+input[type=email].form-error,
+input[type=password].form-error,
+input[type=text].form-error,
+input[type=url].form-error {
+  border: 1px solid #dd4b39;
+}
+.help-link {
+  background: #dd4b39;
+  padding: 0 5px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+}
+.help-link:visited {
+  color: #fff;
+}
+.help-link:hover {
+  opacity: .7;
+  color: #fff;
+}
+.content {
+  width: auto;
+  max-width: 1000px;
+  min-width: 780px;
+}
+.product-info {
+  margin: 0 385px 0 0;
+}
+.product-info h3 {
+  font-size: 1.23em;
+  font-weight: normal;
+}
+.product-info a:visited {
+  color: #61c;
+}
+.sign-in {
+  width: 335px;
+  float: right;
+}
+.signin-box,
+.accountchooser-box {
+  margin: 12px 0 0;
+  padding: 20px 25px 15px;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}
+.product-headers {
+  margin: 0 0 1.5em;
+}
+.product-headers h1 {
+  color: #dd4b39;
+  font-size: 25px;
+  margin: 0;
+}
+.product-headers h2 {
+  font-size: 16px;
+  margin: .4em 0 0;
+}
+.features {
+  overflow: hidden;
+  margin: 2em 0 0;
+}
+.features li {
+  margin: 3px 0 2em;
+}
+.features img {
+  float: left;
+  margin: -3px 0 0;
+}
+.features p {
+  margin: 0 0 0 68px;
+}
+.features .title {
+  font-size: 16px;
+  margin-bottom: .3em;
+}
+.features.no-icon p {
+  margin: 0;
+}
+.features .small-title {
+  font-size: 1em;
+  font-weight: bold;
+}
+.notification-bar {
+  background: #f9edbe;
+  padding: 8px;
+}
+.signin-box h2 {
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+  margin: 0 0 1.2em;
+  position: relative;
+}
+.signin-box h2 strong {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  height: 19px;
+  width: 52px;
+  background: transparent url(//ssl.gstatic.com/accounts/ui/google-signin-flat.png) no-repeat;
+}
+.signin-box label {
+  display: block;
+  margin: 0 0 1.5em;
+}
+.signin-box input[type=text],
+.signin-box input[type=password] {
+  width: 100%;
+  height: 32px;
+  font-size: 15px;
+}
+.signin-box .email-label,
+.signin-box .passwd-label {
+  font-weight: bold;
+  margin: 0 0 .5em;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.signin-box .reauth {
+  display: inline-block;
+  font-size: 15px;
+  height: 29px;
+  line-height: 29px;
+  margin: 0;
+}
+.signin-box label.remember {
+  display: inline-block;
+  vertical-align: top;
+  margin: 9px 0 0;
+}
+.signin-box .remember-label {
+  font-weight: normal;
+  color: #666;
+  line-height: 0;
+  padding: 0 0 0 .4em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.signin-box .g-button img {
+  opacity: 1;
+}
+.signin-box input[type=submit] {
+  margin: 0 1.5em 1.2em 0;
+  height: 32px;
+  font-size: 13px;
+}
+.signin-box ul {
+  margin: 0;
+}
+  </style>
+  </head>
+  <body>
+  <div class="wrapper">
+  <div class="google-header-bar">
+  <div class="header content clearfix">
+  <a id="link-google" href="http://www.google.com/" >
+  <img class="logo" src="//www.google.com/images/logos/google_logo_41.png" alt="Google">
+  </a>
+  <a id="link-signup" class="signup" href="https://accounts.google.com/NewAccount" >Sign up for a new Google Account</a>
   </div>
-  </td>
-  <td>
-  <input type="hidden" name="dsh" id="dsh"
-           value="3761892566368039761" />
+  </div>
+  <div class="main content clearfix">
+  <div class="sign-in">
+<div class="signin-box">
+  <h2>Sign in <strong></strong></h2>
+  <form id="gaia_loginform" action="https://accounts.google.com/ServiceLoginAuth" method="post">
+  <input type="hidden" 
+  
+    
+  name="dsh" id="dsh" value="-7016410730020216670"
+
+  
+ >
   <input type="hidden"
-             name="GALX"
-             value="nF_0dz4z-I0" />
-  <input type="text" name="Email"  id="Email"
-  size="18" value=""
+         name="GALX"
+         value="gw3tJxlUTos">
+  <input type="hidden"
+    id="pstMsg"
+    name="pstMsg"
+    value="0">
+  <input type="hidden"
+    id="dnConn"
+    name="dnConn"
+    value="">
+<input type="hidden" name="timeStmp" id="timeStmp"
+       value=''/>
+<input type="hidden" name="secTok" id="secTok"
+       value=''/>
+<label>
+  <strong class="email-label">Email</strong>
+  <input type="text"  
   
-  
-    class='gaia le val'
-  
-  />
-  </td>
-</tr>
-<tr>
-  <td></td>
-  <td align="left">
-  <div style="color: #666666; font-size: 70%; padding: 0 0 4px 0">
-  ex: pat@example.com
-  </div>
-  </td>
-</tr>
-<tr id="password-row" class="enabled">
-  <td align="right" nowrap="nowrap">
-  <span class="gaia le lbl">
-  Password:
-  </span>
-  </td>
-  <td>
-  <input type="password"
-   name="Passwd" id="Passwd"
-  size="18" 
-  
-  
+    
+  name="Email" id="Email" value=""
 
   
-    class="gaia le val" 
-  
-  />
-  </td>
-</tr>
-<tr>
-  <td></td>
-  <td align="left">
-  </td>
-</tr>
-  <tr id="rememberme-row" class="enabled">
-  <td align="right" valign="top">
-  <input type="checkbox" name="PersistentCookie" id="PersistentCookie"
-    value="yes"
-  
-    checked='checked'
-  
-  />
-  <input type="hidden" name='rmShown' value="1" />
-  </td>
-  <td>
-  <label for="PersistentCookie" id="PersistentCookieLabel" class="gaia le rem">
+>
+</label>
+<label>
+  <strong class="passwd-label">Password</strong>
+  <input type="password" name="Passwd" id="Passwd"
+    
+    
+    
+  >
+</label>
+  <input type="submit" class="g-button g-button-submit" name="signIn" id="signIn"
+      value="Sign in">
+  <label class="remember">
+  <input type="checkbox" 
+  name="PersistentCookie" id="PersistentCookie" value="yes"
+
+    checked="checked"
+  >
+  <strong class="remember-label">
   Stay signed in
+  </strong>
   </label>
-  </td>
-</tr>
-<tr>
-  <td></td>
-  <td align="left">
-  <input type="submit" class="gaia le button" name="signIn" id="signIn"
-           value="Sign in"
-                  />
-  </td>
-</tr>
-<tr id="ga-fprow">
-  <td colspan="2" height="33.0" class="gaia le fpwd"
-    align="center" valign="bottom">
-  <a href="http://www.google.com/support/accounts/bin/answer.py?answer=48598&amp;hl=en&amp;ctx=ch_ServiceLoginAuth&amp;fpUrl=https%3A%2F%2Fwww.google.com%2Faccounts%2FForgotPasswd%3FfpOnly%3D1"
-       target=_top>
+  <input type="hidden" name="rmShown" value="1">
+  </form>
+  <ul>
+  <li>
+  <a id="link-forgot-passwd"
+          href="https://www.google.com/accounts/recovery"
+          target="_top">
   Can&#39;t access your account?
   </a>
-  </td>
-</tr>
-  </table>
-  </div>
-  </td>
-  </tr>
-</table>
-</div>
-<input type="hidden" name="asts"
-       id="asts"
-       value="">
-</form>
-<script><!--
-var gaia_loginForm;
-if (document.getElementById) {
-  gaia_loginForm = document.getElementById("gaia_loginform");
-} else if (window.gaia_loginform) {
-  gaia_loginForm = window.gaia_loginform;
-}
-
-var gaia_emailHasKeypress = false;
-if (gaia_loginForm && gaia_loginForm.Email) {
-  gaia_loginForm.Email.onkeypress = function() {
-    gaia_emailHasKeypress = true;
-  }
-}
-
-function gaia_setFocus() {
-  if (gaia_loginForm) {
-    if (gaia_loginForm.Email && !gaia_loginForm.Email.value) {
-      gaia_loginForm.Email.focus();
-    } else if (gaia_loginForm.Passwd && !gaia_emailHasKeypress) {
-      gaia_loginForm.Passwd.focus();
-    }
-    
-  }
-}
-
-gaia_setFocus();
---></script>
-<form id="gaia_universallogin"
-      action="https://www.google.com/accounts/ServiceLoginAuth" method="post"
-      onsubmit="return(gaia_onLoginSubmit());">
-  <input type="hidden" name="dsh" id="dsh"
-           value="3761892566368039761" />
-</form>
-  <br/>
-<table class="form-noindent" border="0" cellpadding="6" cellspacing="3" width="100%">
-  <tr>
-  <td bgcolor="#e8eefa" align="center" style="font-size:83%">
-  <b>Don't have a Google Account?
-  </b><br/>
-  <a href='https://www.google.com/accounts/NewAccount' >
-  <b>Create an account now</b>
-  </a>
-  </td>
-  </tr>
-</table>
-  </div>
-  <br/>
-  </div>
-  </td>
-  </tr>
-  </table>
-  </div>
-<div class="footer">
-  &copy;2010 Google
-  -
-  <a href='http://www.google.com/'>Google Home</a>
-  -
-  <a href='https://www.google.com/accounts/TOS?hl=en'>Terms of Service</a>
-  -
-  <a href='http://www.google.com/intl/en/privacy.html'>Privacy Policy</a>
-  -
-  <a href='http://www.google.com/support/accounts?hl=en'>Help</a>
+  </li>
+  </ul>
 </div>
   </div>
+  <div class="product-info ">
+<div class="product-headers">
+  <h1>Accounts</h1>
+</div>
+<p>Google has more to offer when you sign in to your Google Account.
+<p>Sign in on the right or
+<a href="https://accounts.google.com/NewAccount">
+create an account for free</a>.</p>
+<ul class="features clearfix">
+  <li>
+  <img src="//www.google.com/images/icons/product/googlemail-42.png" alt="">
+  <p class="title">Gmail</p>
+  <p>Chat with friends and never miss an important email.</p>
+  </li>
+  <li>
+  <img src="//www.google.com/images/icons/feature/search-b42.png" alt="">
+  <p class="title">Personalized Search</p>
+  <p>Get more relevant results based on your past searches.</p>
+  </li>
+  <li>
+  <img src="//www.google.com/images/icons/feature/house-r42.png" alt="">
+  <p class="title">Like Google?</p>
+  <p><a href="http://www.google.com/intl/en/services/hp/index.html#utm_source=gaia">Make Google your homepage.</a></p>
+  </li>
+</ul>
+<p>
+  See <a href="http://www.google.com/intl/en/landing/accounts/index.html#utm_campaign=en&utm_medium=et&utm_source=gaia">more benefits</a> of a Google Account.
+</p>
+  </div>
+  <div id="cc_iframe_parent"></div>
+  </div>
+  <div class="announce-bar">
+  <div class="content">
+  <p class="message">
+  Welcome to Google's new sign-in page.
+  <a target="_blank" href="http://www.google.com/support/accounts/bin/answer.py?answer=1401722&topic=14129&hl=en">Read more</a>
+  </p>
+  </div>
+  </div>
+<div class="google-footer-bar">
+  <div class="footer content clearfix">
+  <ul>
+  <li>© 2011 Google</li>
+  <li><a href="http://www.google.com/" >Google Home</a></li>
+  <li><a href="https://accounts.google.com/TOS?hl=en" >Terms of Service</a></li>
+  <li><a href="http://www.google.com/intl/en/privacy/" >Privacy Policy</a></li>
+  <li><a href="http://www.google.com/support/accounts?hl=en" >Help</a></li>
+  </ul>
+  </div>
+</div>
+  </div>
+  <script type="text/javascript">
+  function gaia_setFocus() {
+  var f = null;
+  if (document.getElementById) {
+  f = document.getElementById('gaia_loginform');
+  }
+  if (f) {
+  if (f.Email && (f.Email.value == null || f.Email.value == '')) {
+  f.Email.focus();
+  } else if (f.Passwd) {
+  f.Passwd.focus();
+  }
+  }
+  }
+  window.onload = gaia_setFocus;
+  function gaia_onLoginSubmit() {
+  if (window.gaiacb_onLoginSubmit) {
+  return gaiacb_onLoginSubmit();
+  } else {
+  return true;
+  }
+  }
+  document.getElementById('gaia_loginform').onsubmit = gaia_onLoginSubmit;
+  var Gb=function(a,b){var c=a;a&&typeof a=="string"&&(c=document.getElementById(a));if(b&&!c)throw new Ga(a);return c},Ga=function(a){this.id=a;this.toString=function(){return"No element found for id '"+this.id+"'"}};var Gc={},Gd;Gd=window.addEventListener?function(a,b,c){var d=function(a){var b=c.call(this,a);!1===b&&Ge(a);return b},a=Gb(a,!0);a.addEventListener(b,d,!1);Gf(a,b).push(d);return d}:window.attachEvent?function(a,b,c){var a=Gb(a,!0),d=function(){var b=window.event,d=c.call(a,b);!1===d&&Ge(b);return d};a.attachEvent("on"+b,d);Gf(a,b).push(d);return d}:void 0;var Gg;
+Gg=window.removeEventListener?function(a,b,c){a=Gb(a,!0);a.removeEventListener(b,c,!1)}:window.detachEvent?function(a,b,c){a=Gb(a,!0);a.detachEvent("on"+b,c)}:void 0;var Ge=function(a){a.preventDefault?a.preventDefault():a.returnValue=!1;return!1},Gf=function(a,b){Gc[a]=Gc[a]||{};Gc[a][b]=Gc[a][b]||[];return Gc[a][b]};var Gh=function(){try{return new XMLHttpRequest}catch(a){for(var b=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=0;c<b.length;c++)try{return new ActiveXObject(b[c])}catch(d){}}return null},Gi=function(){this.c=Gh();this.b={}};Gi.prototype.d=function(){};
+Gi.prototype.send=function(a){var b=[],c;for(c in this.b){var d=this.b[c];b.push(c+"="+encodeURIComponent(d))}var b=b.join("&"),e=this.c,f=this.d;e.open("POST",a,!0);e.setRequestHeader("Content-type","application/x-www-form-urlencoded");e.setRequestHeader("Content-length",String(b.length));e.onreadystatechange=function(){e.readyState==4&&f({status:e.status,text:e.responseText})};e.send(b)};
+Gi.prototype.h=function(a){var b=this.d,c=this.c;c.open("GET",a,!0);c.onreadystatechange=function(){c.readyState==4&&b({status:c.status,text:c.responseText})};c.send()};var Gk=function(a){this.e=a;this.i=this.j();if(this.e==null)throw new Gj("Empty module name");};Gk.prototype.j=function(){var a=window.location.pathname;return a&&a.indexOf("/accounts")==0?"/accounts/JsRemoteLog":"/JsRemoteLog"};
+Gk.prototype.g=function(a,b,c){for(var d=this.i,e=this.e||"",d=d+"?module="+encodeURIComponent(e),a=a||"",d=d+"&type="+encodeURIComponent(a),b=b||"",d=d+"&msg="+encodeURIComponent(b),c=c||[],a=0;a<c.length;a++)d=d+"&arg="+encodeURIComponent(c[a]);try{var f=Math.floor(Math.random()*1E4),d=d+"&r="+String(f)}catch(g){}return d};Gk.prototype.send=function(a,b,c){var d=new Gi;d.b={};try{var e=this.g(a,b,c);d.h(e)}catch(f){}};Gk.prototype.a=function(a,b){this.send("ERROR",a,b)};
+Gk.prototype.k=function(a,b){this.send("WARN",a,b)};Gk.prototype.f=function(a){var b=this;return function(){try{a.apply(null,arguments)}catch(c){throw b.a("Uncatched exception: "+c),c;}}};var Gj=function(a){this.l=a};var G=G||new Gk("check_connection"),Gl=function(a,b,c){var d=function(e){if(!(a!="*"&&e.origin.toLowerCase()!=a.toLowerCase()))e.data!=c?G.k("Received unexpected Message",[e.data,"Expected: "+c]):(b.value=a,Gg(window,"message",d),d=null)};return d},Gm=function(){if(window.__CHECK_CONNECTION_CONFIG){var a=window.__CHECK_CONNECTION_CONFIG.iframeUri,b=window.__CHECK_CONNECTION_CONFIG.iframeOrigin,c=window.__CHECK_CONNECTION_CONFIG.connectivityElementId,d=window.__CHECK_CONNECTION_CONFIG.iframeParentElementId,
+e=window.__CHECK_CONNECTION_CONFIG.msgContent;if(window.postMessage)if(a){var f=document.getElementById(c);f?(c=document.getElementById(d))?(Gd(window,"message",Gl(b,f,e)),b=c,d=window.document.createElement("iframe"),e=d.style,e.visibility="hidden",e.width="1px",e.height="1px",e.position="absolute",e.top="-100px",d.src=a,d.id="CheckConnectionIframe",b.appendChild(d)):G.a("Unable to locate the iframe anchor to appendconnection test iframe",["element id: "+d]):G.a("Unable to locate the input element to storeconnection test result",
+["element id: "+c])}else G.a("Empty iframe URI")}},Gn=function(){if(window.__CHECK_CONNECTION_CONFIG){var a=window.__CHECK_CONNECTION_CONFIG.postMsgSupportElementId;if(window.postMessage){var b=document.getElementById(a);b?b.value="1":G.a("Unable to locate the input element to storepostMessage test result",["element id: "+a])}}};G_checkConnectionMain=G.f(Gm);G_setPostMessageSupportFlag=G.f(Gn);
+
+
+    window.__CHECK_CONNECTION_CONFIG = {
+      
+      iframeUri: 'https:\x2F\x2Faccounts.youtube.com\x2Faccounts\x2FCheckConnection?pmpo=https%3A%2F%2Faccounts.google.com\x26v=772046950',
+      
+      iframeOrigin: 'https:\x2F\x2Faccounts.youtube.com',
+      
+      connectivityElementId: 'dnConn',
+      
+      iframeParentElementId: 'cc_iframe_parent',
+      
+      postMsgSupportElementId: 'pstMsg',
+      
+      msgContent: 'accessible'
+    };
+
+    G_setPostMessageSupportFlag();
+    G_checkConnectionMain();
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</script>
   </body>
 </html>

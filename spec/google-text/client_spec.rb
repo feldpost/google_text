@@ -22,7 +22,7 @@ describe GoogleText::Client do
       
       it "should return a valid xsrf_token" do
         client.get_xsrf_token
-        client.xsrf_token.should_not be_nil        
+        client.xsrf_token.should eq 'gw3tJxlUTos'      
       end
     end
     
@@ -48,24 +48,21 @@ describe GoogleText::Client do
     end
     
     context "get_messages" do
-      before(:all) do
+      before(:each) do
         client.stub!(:login_page).and_return(File.read("spec/data/login_url.html"))
         client.stub!(:post_to_login).and_return(true)
         client.stub!(:dashboard_page).and_return(File.read("spec/data/dashboard_url.html"))
         client.stub!(:inbox_page).and_return(File.read("spec/data/recent_messages.html"))
-      end
-      
-      let(:messages) do
-         client.login
-         client.get_messages
+        client.login
+        @messages = client.get_messages
       end
       
       it "should return an non empty array" do
-        messages.should_not be_empty
+        @messages.should_not be_empty
       end
       
       context "message" do
-        let(:message) {messages.first}
+        let(:message) {@messages.first}
         
         subject { message }
         
