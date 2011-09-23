@@ -1,3 +1,7 @@
+## 0.0.4 (2011-09-23)
+
+* Ease up on Bundler requirement
+
 ## 0.0.3 (2011-09-23)
 
 * Adjusted parsers to Google Voice changes
