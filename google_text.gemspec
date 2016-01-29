@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "json"
   s.add_runtime_dependency "nokogiri"
-  s.add_runtime_dependency "curb", '~>0.7.6'
+  s.add_runtime_dependency "curb"
   
   s.add_development_dependency('rspec')
   s.add_development_dependency('fakeweb')
